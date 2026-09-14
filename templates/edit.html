@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Edit Letter</h1>
+
+<form method="POST">
+
+    {{ form.hidden_tag() }}
+
+    {{ form.recipient_name.label }}
+    {{ form.recipient_name() }}
+
+    {{ form.recipient_email.label }}
+    {{ form.recipient_email() }}
+
+    {{ form.subject.label }}
+    {{ form.subject() }}
+
+    {{ form.body.label }}
+    {{ form.body(rows=10) }}
+
+    <br>
+
+    {{ form.save() }}
+
+</form>
+
+{% endblock %}
